@@ -3,21 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JustStreamIt - Classement de films</title>
+    <title>JustStreamIt - Vidéos à la demande</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
 
     <header>
-        <h1>JustStreamIt</h1>
-        <nav>
-            <ul>
-                <li><a href="#meilleur-film">Meilleur film</a></li>
-                <li><a href="#films-mieux-notes">Films les mieux notés</a></li>
-                <li><a href="#categorie-1">Mystery</a></li>
-                <li><a href="#categorie-2">Comedy</a></li>
-                <li><a href="#autres-categories">Autres catégories</a></li>
-            </ul>
-        </nav>
+        <img src="https://picsum.photos/seed/logo/40/40" alt="Logo JustStreamIt">
+        <div>
+            <h1>JustStreamIt</h1>
+            <p>Vidéos à la demande</p>
+        </div>
     </header>
 
     <main>
@@ -27,69 +28,71 @@
             <h2 id="titre-meilleur-film">Meilleur film</h2>
             <article>
                 <figure>
-                    <img src="https://picsum.photos/seed/bestmovie/400/600" alt="Affiche du film Le Voyage Perdu">
+                    <img src="https://picsum.photos/seed/bestmovie/400/600" alt="Affiche du film The Big Lebowski">
                 </figure>
-                <h3>Le Voyage Perdu</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse potenti. Nullam sit amet risus vitae justo cursus dictum. Sed vehicula, nunc at fermentum tincidunt, urna nunc pretium justo, at malesuada nunc justo eget nulla.</p>
-                <button type="button">Détails</button>
+                <div>
+                    <h3>The Big Lebowski</h3>
+                    <p>Jeff "The Dude" Lebowski, mistaken for a millionaire of the same name, seeks restitution for his ruined rug and enlists his bowling buddies to help get it.</p>
+                    <button type="button">Détails</button>
+                </div>
             </article>
         </section>
 
         <!-- ZONE 2 : Films les mieux notés -->
         <section id="films-mieux-notes" aria-labelledby="titre-films-mieux-notes">
             <h2 id="titre-films-mieux-notes">Films les mieux notés</h2>
-            <ul>
-                <li>
+            <ul class="row g-3">
+                <li class="col-6 col-md-3 col-lg-2">
                     <article>
                         <figure>
-                            <img src="https://picsum.photos/seed/top1/300/450" alt="Affiche du film Les Ombres du Nord">
+                            <img src="https://picsum.photos/seed/top1/300/450" alt="Affiche du film Titanic">
                         </figure>
-                        <h3>Les Ombres du Nord</h3>
+                        <h3>Titanic</h3>
                         <button type="button">Détails</button>
                     </article>
                 </li>
-                <li>
+                <li class="col-6 col-md-3 col-lg-2">
                     <article>
                         <figure>
-                            <img src="https://picsum.photos/seed/top2/300/450" alt="Affiche du film La Dernière Aube">
+                            <img src="https://picsum.photos/seed/top2/300/450" alt="Affiche du film Retour vers le futur">
                         </figure>
-                        <h3>La Dernière Aube</h3>
+                        <h3>Retour vers le futur</h3>
                         <button type="button">Détails</button>
                     </article>
                 </li>
-                <li>
+                <li class="col-6 col-md-3 col-lg-2 d-none d-md-block">
                     <article>
                         <figure>
-                            <img src="https://picsum.photos/seed/top3/300/450" alt="Affiche du film Le Chant des Sables">
+                            <img src="https://picsum.photos/seed/top3/300/450" alt="Affiche du film Scarface">
                         </figure>
-                        <h3>Le Chant des Sables</h3>
+                        <h3>Scarface</h3>
                         <button type="button">Détails</button>
                     </article>
                 </li>
-                <li>
+                <li class="col-6 col-md-3 col-lg-2 d-none d-md-block">
                     <article>
                         <figure>
-                            <img src="https://picsum.photos/seed/top4/300/450" alt="Affiche du film Rivage Oublié">
+                            <img src="https://picsum.photos/seed/top4/300/450" alt="Affiche du film Pulp Fiction">
                         </figure>
-                        <h3>Rivage Oublié</h3>
+                        <h3>Pulp Fiction</h3>
                         <button type="button">Détails</button>
                     </article>
                 </li>
-                <li>
+                <li class="col-6 col-md-3 col-lg-2 d-none d-lg-block">
                     <article>
                         <figure>
-                            <img src="https://picsum.photos/seed/top5/300/450" alt="Affiche du film Sous la Lune Rouge">
+                            <img src="https://picsum.photos/seed/top5/300/450" alt="Affiche du film Le Parrain">
                         </figure>
-                        <h3>Sous la Lune Rouge</h3>
+                        <h3>Le Parrain</h3>
                         <button type="button">Détails</button>
                     </article>
                 </li>
-                <li>
+                <li class="col-6 col-md-3 col-lg-2 d-none d-lg-block">
                     <article>
                         <figure>
-                            <img src="https://picsum.photos/seed/top6/300/450" alt="Affiche du film L'Écho du Silence">
+                            <img src="https://picsum.photos/seed/top6/300/450" alt="Affiche du film Alien">
                         </figure>
-                        <h3>L'Écho du Silence</h3>
+                        <h3>Alien</h3>
                         <button type="button">Détails</button>
                     </article>
                 </li>
@@ -100,58 +103,58 @@
         <!-- ZONE 3 : Catégorie 1 (Mystery) -->
         <section id="categorie-1" aria-labelledby="titre-categorie-1">
             <h2 id="titre-categorie-1">Mystery</h2>
-            <ul>
-                <li>
+            <ul class="row g-3">
+                <li class="col-6 col-md-3 col-lg-2">
                     <article>
                         <figure>
-                            <img src="https://picsum.photos/seed/mystery1/300/450" alt="Affiche du film Le Secret d'Ariane">
+                            <img src="https://picsum.photos/seed/mystery1/300/450" alt="Affiche du film Le Parrain">
                         </figure>
-                        <h3>Le Secret d'Ariane</h3>
+                        <h3>Le Parrain</h3>
                         <button type="button">Détails</button>
                     </article>
                 </li>
-                <li>
+                <li class="col-6 col-md-3 col-lg-2">
                     <article>
                         <figure>
-                            <img src="https://picsum.photos/seed/mystery2/300/450" alt="Affiche du film La Clé Perdue">
+                            <img src="https://picsum.photos/seed/mystery2/300/450" alt="Affiche du film Scarface">
                         </figure>
-                        <h3>La Clé Perdue</h3>
+                        <h3>Scarface</h3>
                         <button type="button">Détails</button>
                     </article>
                 </li>
-                <li>
+                <li class="col-6 col-md-3 col-lg-2 d-none d-md-block">
                     <article>
                         <figure>
-                            <img src="https://picsum.photos/seed/mystery3/300/450" alt="Affiche du film Le Manoir Silencieux">
+                            <img src="https://picsum.photos/seed/mystery3/300/450" alt="Affiche du film Pulp Fiction">
                         </figure>
-                        <h3>Le Manoir Silencieux</h3>
+                        <h3>Pulp Fiction</h3>
                         <button type="button">Détails</button>
                     </article>
                 </li>
-                <li>
+                <li class="col-6 col-md-3 col-lg-2 d-none d-md-block">
                     <article>
                         <figure>
-                            <img src="https://picsum.photos/seed/mystery4/300/450" alt="Affiche du film L'Énigme du Phare">
+                            <img src="https://picsum.photos/seed/mystery4/300/450" alt="Affiche du film Retour vers le futur">
                         </figure>
-                        <h3>L'Énigme du Phare</h3>
+                        <h3>Retour vers le futur</h3>
                         <button type="button">Détails</button>
                     </article>
                 </li>
-                <li>
+                <li class="col-6 col-md-3 col-lg-2 d-none d-lg-block">
                     <article>
                         <figure>
-                            <img src="https://picsum.photos/seed/mystery5/300/450" alt="Affiche du film Trois Jours de Brume">
+                            <img src="https://picsum.photos/seed/mystery5/300/450" alt="Affiche du film Titanic">
                         </figure>
-                        <h3>Trois Jours de Brume</h3>
+                        <h3>Titanic</h3>
                         <button type="button">Détails</button>
                     </article>
                 </li>
-                <li>
+                <li class="col-6 col-md-3 col-lg-2 d-none d-lg-block">
                     <article>
                         <figure>
-                            <img src="https://picsum.photos/seed/mystery6/300/450" alt="Affiche du film Le Dernier Témoin">
+                            <img src="https://picsum.photos/seed/mystery6/300/450" alt="Affiche du film The Big Lebowski">
                         </figure>
-                        <h3>Le Dernier Témoin</h3>
+                        <h3>The Big Lebowski</h3>
                         <button type="button">Détails</button>
                     </article>
                 </li>
@@ -159,11 +162,11 @@
             <button type="button">Voir plus</button>
         </section>
 
-        <!-- ZONE 4 : Catégorie 2 (Comedy) -->
+        <!-- ZONE 4 : Catégorie 2 -->
         <section id="categorie-2" aria-labelledby="titre-categorie-2">
             <h2 id="titre-categorie-2">Comedy</h2>
-            <ul>
-                <li>
+            <ul class="row g-3">
+                <li class="col-6 col-md-3 col-lg-2">
                     <article>
                         <figure>
                             <img src="https://picsum.photos/seed/comedy1/300/450" alt="Affiche du film Vacances Ratées">
@@ -172,7 +175,7 @@
                         <button type="button">Détails</button>
                     </article>
                 </li>
-                <li>
+                <li class="col-6 col-md-3 col-lg-2">
                     <article>
                         <figure>
                             <img src="https://picsum.photos/seed/comedy2/300/450" alt="Affiche du film Le Mariage de Trop">
@@ -181,7 +184,7 @@
                         <button type="button">Détails</button>
                     </article>
                 </li>
-                <li>
+                <li class="col-6 col-md-3 col-lg-2 d-none d-md-block">
                     <article>
                         <figure>
                             <img src="https://picsum.photos/seed/comedy3/300/450" alt="Affiche du film Colocataires">
@@ -190,7 +193,7 @@
                         <button type="button">Détails</button>
                     </article>
                 </li>
-                <li>
+                <li class="col-6 col-md-3 col-lg-2 d-none d-md-block">
                     <article>
                         <figure>
                             <img src="https://picsum.photos/seed/comedy4/300/450" alt="Affiche du film Chaos au Bureau">
@@ -199,7 +202,7 @@
                         <button type="button">Détails</button>
                     </article>
                 </li>
-                <li>
+                <li class="col-6 col-md-3 col-lg-2 d-none d-lg-block">
                     <article>
                         <figure>
                             <img src="https://picsum.photos/seed/comedy5/300/450" alt="Affiche du film Un Air de Famille">
@@ -208,7 +211,7 @@
                         <button type="button">Détails</button>
                     </article>
                 </li>
-                <li>
+                <li class="col-6 col-md-3 col-lg-2 d-none d-lg-block">
                     <article>
                         <figure>
                             <img src="https://picsum.photos/seed/comedy6/300/450" alt="Affiche du film Le Pire Rendez-vous">
@@ -223,19 +226,21 @@
 
         <!-- ZONE 5 : Autres catégories (sélection dynamique) -->
         <section id="autres-categories" aria-labelledby="titre-autres-categories">
-            <h2 id="titre-autres-categories">Autres catégories</h2>
+            <h2 id="titre-autres-categories">Autres :</h2>
 
             <label for="select-categorie">Choisir une catégorie :</label>
-            <select id="select-categorie" name="categorie">
-                <option value="action">Action</option>
-                <option value="drama">Drama</option>
-                <option value="romance">Romance</option>
-                <option value="scifi">Science-Fiction</option>
-                <option value="horror">Horror</option>
+            <select id="select-categorie" name="categorie" class="form-select">
+                <option value="action">Films d'action</option>
+                <option value="comedy" selected>Comédies</option>
+                <option value="family">Famille</option>
+                <option value="fantasy">Films de fantasy</option>
+                <option value="horror">Films d'horreur</option>
+                <option value="scifi">Science-fiction</option>
+                <option value="western">Westerns</option>
             </select>
 
-            <ul>
-                <li>
+            <ul class="row g-3">
+                <li class="col-6 col-md-3 col-lg-2">
                     <article>
                         <figure>
                             <img src="https://picsum.photos/seed/autre1/300/450" alt="Affiche du film Terre Inconnue">
@@ -244,7 +249,7 @@
                         <button type="button">Détails</button>
                     </article>
                 </li>
-                <li>
+                <li class="col-6 col-md-3 col-lg-2">
                     <article>
                         <figure>
                             <img src="https://picsum.photos/seed/autre2/300/450" alt="Affiche du film La Chute des Titans">
@@ -253,7 +258,7 @@
                         <button type="button">Détails</button>
                     </article>
                 </li>
-                <li>
+                <li class="col-6 col-md-3 col-lg-2 d-none d-md-block">
                     <article>
                         <figure>
                             <img src="https://picsum.photos/seed/autre3/300/450" alt="Affiche du film Frontière Rouge">
@@ -262,7 +267,7 @@
                         <button type="button">Détails</button>
                     </article>
                 </li>
-                <li>
+                <li class="col-6 col-md-3 col-lg-2 d-none d-md-block">
                     <article>
                         <figure>
                             <img src="https://picsum.photos/seed/autre4/300/450" alt="Affiche du film Le Dernier Rempart">
@@ -271,7 +276,7 @@
                         <button type="button">Détails</button>
                     </article>
                 </li>
-                <li>
+                <li class="col-6 col-md-3 col-lg-2 d-none d-lg-block">
                     <article>
                         <figure>
                             <img src="https://picsum.photos/seed/autre5/300/450" alt="Affiche du film Nuit sans Fin">
@@ -280,7 +285,7 @@
                         <button type="button">Détails</button>
                     </article>
                 </li>
-                <li>
+                <li class="col-6 col-md-3 col-lg-2 d-none d-lg-block">
                     <article>
                         <figure>
                             <img src="https://picsum.photos/seed/autre6/300/450" alt="Affiche du film Horizon Brisé">
@@ -297,49 +302,32 @@
 
     <!-- MODALE : détail d'un film -->
     <dialog id="modal-detail-film" aria-labelledby="modal-titre-film">
-        <button type="button" aria-label="Fermer la fenêtre">Fermer</button>
 
         <figure>
-            <img src="https://picsum.photos/seed/detail/500/700" alt="Affiche du film sélectionné">
+            <img src="https://picsum.photos/seed/detail/500/700" alt="Affiche du film The Big Lebowski">
         </figure>
 
-        <h2 id="modal-titre-film">Le Voyage Perdu</h2>
+        <h2 id="modal-titre-film">The Big Lebowski</h2>
 
-        <dl>
-            <dt>Genre</dt>
-            <dd>Mystery, Drama, Thriller</dd>
+        <p>1998 - Comedy, Crime, Sport</p>
+        <p>PG-13 - 117 minutes (USA / UK)</p>
+        <p>IMDB score : 8.1/10</p>
+        <p>Recettes au box-office : 48 200 000 $</p>
 
-            <dt>Date de sortie</dt>
-            <dd>12 mars 2019</dd>
+        <p>Réalisé par : Joel Cohen, Ethan Cohen</p>
 
-            <dt>Classification</dt>
-            <dd>12+</dd>
+        <p>When the dude Lebowski is mistaken for a millionaire Lebowski, two thugs urinate on his rug to coerce him into paying a debt he knows nothing about. While attempting to gain recompense for the ruined rug from his wealthy counterpart, he accepts a one time job with high pay-off. He enlists the help of his bowling buddy, Walter, a gun toting Jewish-convert with anger issues. Deception leads to more trouble, and it soon seems that everyone from porn empire tycoons to nihilists want something from The Dude.</p>
 
-            <dt>Score IMDB</dt>
-            <dd>8.4</dd>
+        <h3>Avec :</h3>
+        <p>David Huddleston, Flea, Jack Kehler, Jeff Bridges, Jimmie Dale Gilmore, John Goodman, John Turturro, Julianne Moore, Mark Pellegrino, Peter Stormare, Philip Moon, Philip Seymour Hoffman, Steve Buscemi, Tara Reid, Torsten Voges</p>
 
-            <dt>Réalisateur</dt>
-            <dd>Jeanne Fontaine</dd>
-
-            <dt>Acteurs</dt>
-            <dd>Marc Delacroix, Sophie Renard, Hugo Lambert</dd>
-
-            <dt>Durée</dt>
-            <dd>128 minutes</dd>
-
-            <dt>Pays d'origine</dt>
-            <dd>France</dd>
-
-            <dt>Recettes au box-office</dt>
-            <dd>24 500 000 $</dd>
-        </dl>
-
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum. Cras venenatis euismod malesuada. Curabitur ac massa lorem.</p>
+        <button type="button" aria-label="Fermer la fenêtre">Fermer</button>
     </dialog>
 
     <footer>
         <p>&copy; 2026 JustStreamIt - Association de classement de films</p>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

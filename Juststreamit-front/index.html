@@ -28,12 +28,12 @@
             <h2 id="titre-meilleur-film">Meilleur film</h2>
             <article>
                 <figure>
-                    <img src="https://picsum.photos/seed/bestmovie/400/600" alt="Affiche du film The Big Lebowski">
+                    <img id="meilleur-film-image" src="https://picsum.photos/seed/bestmovie/400/600" alt="Affiche du film The Big Lebowski">
                 </figure>
                 <div>
-                    <h3>The Big Lebowski</h3>
-                    <p>Jeff "The Dude" Lebowski, mistaken for a millionaire of the same name, seeks restitution for his ruined rug and enlists his bowling buddies to help get it.</p>
-                    <button type="button">Détails</button>
+                    <h3 id="meilleur-film-titre">The Big Lebowski</h3>
+                    <p id="meilleur-film-resume">Jeff "The Dude" Lebowski, mistaken for a millionaire of the same name, seeks restitution for his ruined rug and enlists his bowling buddies to help get it.</p>
+                    <button type="button" id="meilleur-film-bouton-details">Détails</button>
                 </div>
             </article>
         </section>
@@ -41,61 +41,7 @@
         <!-- ZONE 2 : Films les mieux notés -->
         <section id="films-mieux-notes" aria-labelledby="titre-films-mieux-notes">
             <h2 id="titre-films-mieux-notes">Films les mieux notés</h2>
-            <ul class="row g-3">
-                <li class="col-6 col-md-3 col-lg-2">
-                    <article>
-                        <figure>
-                            <img src="https://picsum.photos/seed/top1/300/450" alt="Affiche du film Titanic">
-                        </figure>
-                        <h3>Titanic</h3>
-                        <button type="button">Détails</button>
-                    </article>
-                </li>
-                <li class="col-6 col-md-3 col-lg-2">
-                    <article>
-                        <figure>
-                            <img src="https://picsum.photos/seed/top2/300/450" alt="Affiche du film Retour vers le futur">
-                        </figure>
-                        <h3>Retour vers le futur</h3>
-                        <button type="button">Détails</button>
-                    </article>
-                </li>
-                <li class="col-6 col-md-3 col-lg-2 d-none d-md-block">
-                    <article>
-                        <figure>
-                            <img src="https://picsum.photos/seed/top3/300/450" alt="Affiche du film Scarface">
-                        </figure>
-                        <h3>Scarface</h3>
-                        <button type="button">Détails</button>
-                    </article>
-                </li>
-                <li class="col-6 col-md-3 col-lg-2 d-none d-md-block">
-                    <article>
-                        <figure>
-                            <img src="https://picsum.photos/seed/top4/300/450" alt="Affiche du film Pulp Fiction">
-                        </figure>
-                        <h3>Pulp Fiction</h3>
-                        <button type="button">Détails</button>
-                    </article>
-                </li>
-                <li class="col-6 col-md-3 col-lg-2 d-none d-lg-block">
-                    <article>
-                        <figure>
-                            <img src="https://picsum.photos/seed/top5/300/450" alt="Affiche du film Le Parrain">
-                        </figure>
-                        <h3>Le Parrain</h3>
-                        <button type="button">Détails</button>
-                    </article>
-                </li>
-                <li class="col-6 col-md-3 col-lg-2 d-none d-lg-block">
-                    <article>
-                        <figure>
-                            <img src="https://picsum.photos/seed/top6/300/450" alt="Affiche du film Alien">
-                        </figure>
-                        <h3>Alien</h3>
-                        <button type="button">Détails</button>
-                    </article>
-                </li>
+            <ul id="liste-films-mieux-notes" class="row g-3">
             </ul>
             <button type="button">Voir plus</button>
         </section>
@@ -103,61 +49,7 @@
         <!-- ZONE 3 : Catégorie 1 (Mystery) -->
         <section id="categorie-1" aria-labelledby="titre-categorie-1">
             <h2 id="titre-categorie-1">Mystery</h2>
-            <ul class="row g-3">
-                <li class="col-6 col-md-3 col-lg-2">
-                    <article>
-                        <figure>
-                            <img src="https://picsum.photos/seed/mystery1/300/450" alt="Affiche du film Le Parrain">
-                        </figure>
-                        <h3>Le Parrain</h3>
-                        <button type="button">Détails</button>
-                    </article>
-                </li>
-                <li class="col-6 col-md-3 col-lg-2">
-                    <article>
-                        <figure>
-                            <img src="https://picsum.photos/seed/mystery2/300/450" alt="Affiche du film Scarface">
-                        </figure>
-                        <h3>Scarface</h3>
-                        <button type="button">Détails</button>
-                    </article>
-                </li>
-                <li class="col-6 col-md-3 col-lg-2 d-none d-md-block">
-                    <article>
-                        <figure>
-                            <img src="https://picsum.photos/seed/mystery3/300/450" alt="Affiche du film Pulp Fiction">
-                        </figure>
-                        <h3>Pulp Fiction</h3>
-                        <button type="button">Détails</button>
-                    </article>
-                </li>
-                <li class="col-6 col-md-3 col-lg-2 d-none d-md-block">
-                    <article>
-                        <figure>
-                            <img src="https://picsum.photos/seed/mystery4/300/450" alt="Affiche du film Retour vers le futur">
-                        </figure>
-                        <h3>Retour vers le futur</h3>
-                        <button type="button">Détails</button>
-                    </article>
-                </li>
-                <li class="col-6 col-md-3 col-lg-2 d-none d-lg-block">
-                    <article>
-                        <figure>
-                            <img src="https://picsum.photos/seed/mystery5/300/450" alt="Affiche du film Titanic">
-                        </figure>
-                        <h3>Titanic</h3>
-                        <button type="button">Détails</button>
-                    </article>
-                </li>
-                <li class="col-6 col-md-3 col-lg-2 d-none d-lg-block">
-                    <article>
-                        <figure>
-                            <img src="https://picsum.photos/seed/mystery6/300/450" alt="Affiche du film The Big Lebowski">
-                        </figure>
-                        <h3>The Big Lebowski</h3>
-                        <button type="button">Détails</button>
-                    </article>
-                </li>
+            <ul id="liste-categorie-1" class="row g-3">
             </ul>
             <button type="button">Voir plus</button>
         </section>
@@ -165,61 +57,7 @@
         <!-- ZONE 4 : Catégorie 2 -->
         <section id="categorie-2" aria-labelledby="titre-categorie-2">
             <h2 id="titre-categorie-2">Comedy</h2>
-            <ul class="row g-3">
-                <li class="col-6 col-md-3 col-lg-2">
-                    <article>
-                        <figure>
-                            <img src="https://picsum.photos/seed/comedy1/300/450" alt="Affiche du film Vacances Ratées">
-                        </figure>
-                        <h3>Vacances Ratées</h3>
-                        <button type="button">Détails</button>
-                    </article>
-                </li>
-                <li class="col-6 col-md-3 col-lg-2">
-                    <article>
-                        <figure>
-                            <img src="https://picsum.photos/seed/comedy2/300/450" alt="Affiche du film Le Mariage de Trop">
-                        </figure>
-                        <h3>Le Mariage de Trop</h3>
-                        <button type="button">Détails</button>
-                    </article>
-                </li>
-                <li class="col-6 col-md-3 col-lg-2 d-none d-md-block">
-                    <article>
-                        <figure>
-                            <img src="https://picsum.photos/seed/comedy3/300/450" alt="Affiche du film Colocataires">
-                        </figure>
-                        <h3>Colocataires</h3>
-                        <button type="button">Détails</button>
-                    </article>
-                </li>
-                <li class="col-6 col-md-3 col-lg-2 d-none d-md-block">
-                    <article>
-                        <figure>
-                            <img src="https://picsum.photos/seed/comedy4/300/450" alt="Affiche du film Chaos au Bureau">
-                        </figure>
-                        <h3>Chaos au Bureau</h3>
-                        <button type="button">Détails</button>
-                    </article>
-                </li>
-                <li class="col-6 col-md-3 col-lg-2 d-none d-lg-block">
-                    <article>
-                        <figure>
-                            <img src="https://picsum.photos/seed/comedy5/300/450" alt="Affiche du film Un Air de Famille">
-                        </figure>
-                        <h3>Un Air de Famille</h3>
-                        <button type="button">Détails</button>
-                    </article>
-                </li>
-                <li class="col-6 col-md-3 col-lg-2 d-none d-lg-block">
-                    <article>
-                        <figure>
-                            <img src="https://picsum.photos/seed/comedy6/300/450" alt="Affiche du film Le Pire Rendez-vous">
-                        </figure>
-                        <h3>Le Pire Rendez-vous</h3>
-                        <button type="button">Détails</button>
-                    </article>
-                </li>
+            <ul id="liste-categorie-2" class="row g-3">
             </ul>
             <button type="button">Voir plus</button>
         </section>
@@ -329,5 +167,8 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>

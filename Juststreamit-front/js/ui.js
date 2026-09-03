@@ -25,21 +25,13 @@ function renderBestMovie(movie) {
 
 /**
  * Construit un <li> de film à insérer dans une grille responsive.
- * Les classes appliquées reproduisent la règle 2 (mobile) / 4 (tablette) / 6 (desktop).
+ * 1 colonne en mobile, 2 en tablette (dès 768px), 3 en desktop (dès 992px).
  * @param {Object} movie
- * @param {number} index - position du film dans la liste (0 à 5)
  * @returns {HTMLLIElement}
  */
-function createMovieListItem(movie, index) {
+function createMovieListItem(movie) {
     const li = document.createElement("li");
-    li.className = "col-6 col-md-3 col-lg-2";
-
-    if (index === 2 || index === 3) {
-        li.classList.add("d-none", "d-md-block");
-    }
-    if (index === 4 || index === 5) {
-        li.classList.add("d-none", "d-lg-block");
-    }
+    li.className = "col-12 col-md-6 col-lg-4";
 
     li.innerHTML = `
         <article>
@@ -63,8 +55,8 @@ function renderMovieList(listElementId, movies) {
     const list = document.getElementById(listElementId);
     list.innerHTML = "";
 
-    movies.forEach((movie, index) => {
-        list.appendChild(createMovieListItem(movie, index));
+    movies.forEach((movie) => {
+        list.appendChild(createMovieListItem(movie));
     });
 }
 

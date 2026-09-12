@@ -1,0 +1,272 @@
+/* ==========================================================================
+   JustStreamIt — Charte visuelle
+   ========================================================================== */
+
+:root {
+    --color-bg-dark: #12151f;
+    --color-bg-dark-alt: #1b2030;
+    --color-bg-light: #f4f5f7;
+    --color-accent: #e63946;
+    --color-accent-hover: #c92c38;
+    --color-text-light: #f5f5f7;
+    --color-text-muted: #a9adba;
+    --color-text-dark: #1a1c23;
+    --color-card-shadow: rgba(0, 0, 0, 0.25);
+
+    --font-display: "Bebas Neue", "Oswald", sans-serif;
+    --font-body: "Inter", sans-serif;
+
+    --radius-base: 6px;
+}
+
+body {
+    font-family: var(--font-body);
+    color: var(--color-text-dark);
+    background-color: var(--color-bg-light);
+    margin: 0;
+}
+
+h1, h2, h3 {
+    font-family: var(--font-display);
+    letter-spacing: 0.03em;
+}
+
+/* ---------- Header ---------- */
+
+header {
+    background-color: var(--color-bg-dark);
+    color: var(--color-text-light);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 1.5rem;
+}
+
+header img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+header h1 {
+    font-size: 1.6rem;
+    margin: 0;
+}
+
+header p {
+    margin: 0;
+    color: var(--color-text-muted);
+    font-size: 0.9rem;
+}
+
+/* ---------- Zone "Meilleur film" ---------- */
+
+#meilleur-film {
+    background-color: var(--color-bg-dark-alt);
+    color: var(--color-text-light);
+    padding: 2rem 1.5rem;
+}
+
+#meilleur-film h2 {
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    color: var(--color-text-muted);
+    margin-bottom: 1rem;
+}
+
+#meilleur-film article {
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+#meilleur-film figure {
+    margin: 0;
+    flex-shrink: 0;
+}
+
+#meilleur-film img {
+    width: 200px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: var(--radius-base);
+    box-shadow: 0 8px 24px var(--color-card-shadow);
+}
+
+#meilleur-film h3 {
+    font-size: 1.8rem;
+    margin: 0 0 0.75rem 0;
+}
+
+#meilleur-film p {
+    color: var(--color-text-muted);
+    max-width: 45ch;
+    line-height: 1.5;
+}
+
+/* ---------- Sections de films (grille) ---------- */
+
+main > section:not(#meilleur-film) {
+    padding: 2rem 1.5rem;
+}
+
+main > section h2 {
+    font-size: 1.3rem;
+    margin-bottom: 1.25rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 3px solid var(--color-accent);
+    display: inline-block;
+}
+
+main > section ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+main > section li article {
+    background-color: #fff;
+    border-radius: var(--radius-base);
+    overflow: hidden;
+    box-shadow: 0 2px 8px var(--color-card-shadow);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    height: 100%;
+}
+
+main > section li article:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 20px var(--color-card-shadow);
+}
+
+main > section li img {
+    width: 100%;
+    aspect-ratio: 2 / 3;
+    object-fit: cover;
+    display: block;
+}
+
+main > section li h3 {
+    font-size: 0.95rem;
+    margin: 0.6rem 0.6rem 0 0.6rem;
+    color: var(--color-text-dark);
+}
+
+main > section li article button {
+    display: block;
+    margin: 0.6rem;
+}
+
+/* ---------- Boutons ---------- */
+
+button {
+    font-family: var(--font-body);
+    font-weight: 600;
+    background-color: var(--color-accent);
+    color: #fff;
+    border: none;
+    border-radius: var(--radius-base);
+    padding: 0.5rem 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+button:hover {
+    background-color: var(--color-accent-hover);
+}
+
+#meilleur-film button {
+    margin-top: 0.5rem;
+}
+
+main > section > button {
+    display: block;
+    margin: 1.5rem auto 0 auto;
+}
+
+/* ---------- Sélecteur "Autres" ---------- */
+
+#autres-categories label {
+    display: block;
+    margin-bottom: 0.4rem;
+    font-weight: 600;
+}
+
+#autres-categories select {
+    font-family: var(--font-body);
+    padding: 0.5rem 0.8rem;
+    border-radius: var(--radius-base);
+    border: 1px solid #ccc;
+    margin-bottom: 1.5rem;
+    min-width: 220px;
+}
+
+/* ---------- Modale ---------- */
+
+dialog {
+    border: none;
+    border-radius: var(--radius-base);
+    padding: 1.5rem;
+    max-width: 700px;
+    width: 90vw;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+}
+
+dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+dialog figure {
+    margin: 0 0 1rem 0;
+}
+
+dialog img {
+    width: 100%;
+    max-width: 260px;
+    border-radius: var(--radius-base);
+    float: left;
+    margin: 0 1.25rem 0.75rem 0;
+}
+
+dialog h2 {
+    font-size: 1.6rem;
+    margin: 0 0 0.5rem 0;
+}
+
+dialog p {
+    margin: 0.2rem 0;
+    color: var(--color-text-dark);
+}
+
+dialog h3 {
+    clear: left;
+    font-size: 1rem;
+    margin-top: 1rem;
+    text-transform: uppercase;
+    color: var(--color-text-muted);
+}
+
+dialog button {
+    clear: both;
+    display: block;
+    margin: 1.5rem 0 0 auto;
+}
+
+/* ---------- Footer ---------- */
+
+footer {
+    background-color: var(--color-bg-dark);
+    color: var(--color-text-muted);
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.85rem;
+}
+
+/* ---------- Responsive : tailles d'écran ---------- */
+
+@media (min-width: 768px) {
+    #meilleur-film img {
+        width: 240px;
+        height: 360px;
+    }
+}

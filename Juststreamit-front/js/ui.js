@@ -1,7 +1,7 @@
 /**
  * ui.js
  * Fonctions responsables de la génération du DOM à partir des données
- * renvoyées par l'API (aucun appel fetch ici, uniquement du rendu).
+ * renvoyées par l'API.
  */
 
 /**
@@ -26,12 +26,22 @@ function renderBestMovie(movie) {
 /**
  * Construit un <li> de film à insérer dans une grille responsive.
  * 1 colonne en mobile, 2 en tablette (dès 768px), 3 en desktop (dès 992px).
+ * Les films 3-4 et 5-6 portent une classe de masquage qui sera levée par
+ * le bouton "Voir plus" (ajout de la classe .liste-etendue sur le <ul>).
  * @param {Object} movie
+ * @param {number} index - position du film dans la liste (0 à 5)
  * @returns {HTMLLIElement}
  */
-function createMovieListItem(movie) {
+function createMovieListItem(movie, index) {
     const li = document.createElement("li");
     li.className = "col-12 col-md-6 col-lg-4";
+
+    if (index === 2 || index === 3) {
+        li.classList.add("film-cache-mobile");
+    }
+    if (index === 4 || index === 5) {
+        li.classList.add("film-cache-tablette");
+    }
 
     li.innerHTML = `
         <article>
@@ -48,15 +58,17 @@ function createMovieListItem(movie) {
 
 /**
  * Vide un conteneur puis y insère une liste de films.
+ * Réinitialise aussi l'état "étendu" de la liste
  * @param {string} listElementId - id du <ul> cible
  * @param {Array} movies
  */
 function renderMovieList(listElementId, movies) {
     const list = document.getElementById(listElementId);
     list.innerHTML = "";
+    list.classList.remove("liste-etendue");
 
-    movies.forEach((movie) => {
-        list.appendChild(createMovieListItem(movie));
+    movies.forEach((movie, index) => {
+        list.appendChild(createMovieListItem(movie, index));
     });
 }
 

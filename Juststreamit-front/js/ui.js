@@ -1,7 +1,7 @@
 /**
  * ui.js
  * Fonctions responsables de la génération du DOM à partir des données
- * renvoyées par l'API.
+ * renvoyées par l'API (aucun appel fetch ici, uniquement du rendu).
  */
 
 /**
@@ -58,7 +58,8 @@ function createMovieListItem(movie, index) {
 
 /**
  * Vide un conteneur puis y insère une liste de films.
- * Réinitialise aussi l'état "étendu" de la liste
+ * Réinitialise aussi l'état "étendu" de la liste (utile si la catégorie
+ * change et que la liste précédente était en mode "Voir plus").
  * @param {string} listElementId - id du <ul> cible
  * @param {Array} movies
  */
@@ -86,4 +87,42 @@ function renderGenreOptions(genres) {
         option.textContent = genre.name;
         select.appendChild(option);
     });
+}
+
+/**
+ * Remplit la fenêtre modale avec le détail complet d'un film.
+ * @param {Object} movie - détail complet renvoyé par fetchMovieDetail
+ */
+function renderMovieModal(movie) {
+    const image = document.getElementById("modal-image");
+    image.src = movie.image_url;
+    image.alt = `Affiche du film ${movie.title}`;
+    image.onerror = function () {
+        this.onerror = null;
+        this.src = "https://placehold.co/300x450?text=Affiche+indisponible";
+    };
+
+    document.getElementById("modal-titre-film").textContent = movie.title;
+
+    const genres = (movie.genres || []).join(", ");
+    document.getElementById("modal-annee-genres").textContent = `${movie.year} - ${genres}`;
+
+    const pays = (movie.countries || []).join(", ");
+    document.getElementById("modal-classification-duree-pays").textContent =
+        `${movie.rated} - ${movie.duration} minutes (${pays})`;
+
+    document.getElementById("modal-score").textContent = `IMDB score : ${movie.imdb_score}/10`;
+
+    const boxOffice = movie.worldwide_gross_income
+        ? `${movie.worldwide_gross_income} $`
+        : "Non communiquées";
+    document.getElementById("modal-box-office").textContent = `Recettes au box-office : ${boxOffice}`;
+
+    const realisateurs = (movie.directors || []).join(", ");
+    document.getElementById("modal-realisateur").textContent = `Réalisé par : ${realisateurs}`;
+
+    document.getElementById("modal-resume").textContent = movie.long_description || movie.description || "";
+
+    const acteurs = (movie.actors || []).join(", ");
+    document.getElementById("modal-acteurs").textContent = acteurs;
 }

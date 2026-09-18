@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<<!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
@@ -43,7 +43,7 @@
             <h2 id="titre-films-mieux-notes">Films les mieux notés</h2>
             <ul id="liste-films-mieux-notes" class="row g-3">
             </ul>
-            <button type="button">Voir plus</button>
+            <button type="button" class="bouton-voir-plus d-lg-none" data-list-id="liste-films-mieux-notes">Voir plus</button>
         </section>
 
         <!-- ZONE 3 : Catégorie 1 (Mystery) -->
@@ -51,7 +51,7 @@
             <h2 id="titre-categorie-1">Mystery</h2>
             <ul id="liste-categorie-1" class="row g-3">
             </ul>
-            <button type="button">Voir plus</button>
+            <button type="button" class="bouton-voir-plus d-lg-none" data-list-id="liste-categorie-1">Voir plus</button>
         </section>
 
         <!-- ZONE 4 : Catégorie 2 -->
@@ -59,7 +59,7 @@
             <h2 id="titre-categorie-2">Comedy</h2>
             <ul id="liste-categorie-2" class="row g-3">
             </ul>
-            <button type="button">Voir plus</button>
+            <button type="button" class="bouton-voir-plus d-lg-none" data-list-id="liste-categorie-2">Voir plus</button>
         </section>
 
         <!-- ZONE 5 : Autres catégories (sélection dynamique) -->
@@ -133,7 +133,7 @@
                     </article>
                 </li>
             </ul>
-            <button type="button">Voir plus</button>
+            <button type="button" class="bouton-voir-plus d-lg-none" data-list-id="liste-autres">Voir plus</button>
         </section>
 
     </main>
@@ -142,24 +142,24 @@
     <dialog id="modal-detail-film" aria-labelledby="modal-titre-film">
 
         <figure>
-            <img src="https://picsum.photos/seed/detail/500/700" alt="Affiche du film The Big Lebowski">
+            <img id="modal-image" src="https://picsum.photos/seed/detail/500/700" alt="Affiche du film">
         </figure>
 
-        <h2 id="modal-titre-film">The Big Lebowski</h2>
+        <h2 id="modal-titre-film">Titre du film</h2>
 
-        <p>1998 - Comedy, Crime, Sport</p>
-        <p>PG-13 - 117 minutes (USA / UK)</p>
-        <p>IMDB score : 8.1/10</p>
-        <p>Recettes au box-office : 48 200 000 $</p>
+        <p id="modal-annee-genres">Année - Genres</p>
+        <p id="modal-classification-duree-pays">Classification - Durée (Pays)</p>
+        <p id="modal-score">IMDB score : </p>
+        <p id="modal-box-office">Recettes au box-office : </p>
 
-        <p>Réalisé par : Joel Cohen, Ethan Cohen</p>
+        <p id="modal-realisateur">Réalisé par : </p>
 
-        <p>When the dude Lebowski is mistaken for a millionaire Lebowski, two thugs urinate on his rug to coerce him into paying a debt he knows nothing about. While attempting to gain recompense for the ruined rug from his wealthy counterpart, he accepts a one time job with high pay-off. He enlists the help of his bowling buddy, Walter, a gun toting Jewish-convert with anger issues. Deception leads to more trouble, and it soon seems that everyone from porn empire tycoons to nihilists want something from The Dude.</p>
+        <p id="modal-resume"></p>
 
         <h3>Avec :</h3>
-        <p>David Huddleston, Flea, Jack Kehler, Jeff Bridges, Jimmie Dale Gilmore, John Goodman, John Turturro, Julianne Moore, Mark Pellegrino, Peter Stormare, Philip Moon, Philip Seymour Hoffman, Steve Buscemi, Tara Reid, Torsten Voges</p>
+        <p id="modal-acteurs"></p>
 
-        <button type="button" aria-label="Fermer la fenêtre">Fermer</button>
+        <button type="button" id="modal-fermer-bouton" aria-label="Fermer la fenêtre">Fermer</button>
     </dialog>
 
     <footer>

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="fr">
+<style>
+                            @import url('https://fonts.cdnfonts.com/css/oswald-4');
+</style>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JustStreamIt - Vidéos à la demande</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <img src="../bfc68efce2ebbbe61c2ce32b7d75dfc497b7201f.png" alt="Logo JustStreamIt">
+        <div>
+            <h1>JustStreamIt</h1>
+            <p>Vidéos à la demande</p>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- ZONE 1 : Meilleur film -->
+        <section id="meilleur-film" aria-labelledby="titre-meilleur-film">
+            <h2 id="titre-meilleur-film">Meilleur film</h2>
+            <article>
+                <figure>
+                    <img id="meilleur-film-image" src="https://picsum.photos/seed/bestmovie/400/600" alt="Affiche du film The Big Lebowski">
+                </figure>
+                <div>
+                    <h3 id="meilleur-film-titre">The Big Lebowski</h3>
+                    <p id="meilleur-film-resume">Jeff "The Dude" Lebowski, mistaken for a millionaire of the same name, seeks restitution for his ruined rug and enlists his bowling buddies to help get it.</p>
+                    <button type="button" id="meilleur-film-bouton-details">Détails</button>
+                </div>
+            </article>
+        </section>
+
+        <!-- ZONE 2 : Films les mieux notés -->
+        <section id="films-mieux-notes" aria-labelledby="titre-films-mieux-notes">
+            <h2 id="titre-films-mieux-notes">Films les mieux notés</h2>
+            <ul id="liste-films-mieux-notes" class="row g-3">
+            </ul>
+            <button type="button" class="bouton-voir-plus d-lg-none" data-list-id="liste-films-mieux-notes">Voir plus</button>
+        </section>
+
+        <!-- ZONE 3 : Catégorie 1 (Mystery) -->
+        <section id="categorie-1" aria-labelledby="titre-categorie-1">
+            <h2 id="titre-categorie-1">Mystery</h2>
+            <ul id="liste-categorie-1" class="row g-3">
+            </ul>
+            <button type="button" class="bouton-voir-plus d-lg-none" data-list-id="liste-categorie-1">Voir plus</button>
+        </section>
+
+        <!-- ZONE 4 : Catégorie 2 -->
+        <section id="categorie-2" aria-labelledby="titre-categorie-2">
+            <h2 id="titre-categorie-2">Comedy</h2>
+            <ul id="liste-categorie-2" class="row g-3">
+            </ul>
+            <button type="button" class="bouton-voir-plus d-lg-none" data-list-id="liste-categorie-2">Voir plus</button>
+        </section>
+
+        <!-- ZONE 5 : Autres catégories (sélection dynamique) -->
+        <section id="autres-categories" aria-labelledby="titre-autres-categories">
+            <h2 id="titre-autres-categories">Autres :</h2>
+
+            <label for="select-categorie">Choisir une catégorie :</label>
+            <select id="select-categorie" name="categorie" class="form-select">
+                <option value="action">Films d'action</option>
+                <option value="comedy" selected>Comédies</option>
+                <option value="family">Famille</option>
+                <option value="fantasy">Films de fantasy</option>
+                <option value="horror">Films d'horreur</option>
+                <option value="scifi">Science-fiction</option>
+                <option value="western">Westerns</option>
+            </select>
+
+            <ul id="liste-autres" class="row g-3">
+                <li class="col-12 col-md-6 col-lg-4">
+                    <article>
+                        <figure>
+                            <img src="https://picsum.photos/seed/autre1/300/450" alt="Affiche du film Terre Inconnue">
+                        </figure>
+                        <h3>Terre Inconnue</h3>
+                        <button type="button">Détails</button>
+                    </article>
+                </li>
+                <li class="col-12 col-md-6 col-lg-4">
+                    <article>
+                        <figure>
+                            <img src="https://picsum.photos/seed/autre2/300/450" alt="Affiche du film La Chute des Titans">
+                        </figure>
+                        <h3>La Chute des Titans</h3>
+                        <button type="button">Détails</button>
+                    </article>
+                </li>
+                <li class="col-12 col-md-6 col-lg-4 film-cache-mobile">
+                    <article>
+                        <figure>
+                            <img src="https://picsum.photos/seed/autre3/300/450" alt="Affiche du film Frontière Rouge">
+                        </figure>
+                        <h3>Frontière Rouge</h3>
+                        <button type="button">Détails</button>
+                    </article>
+                </li>
+                <li class="col-12 col-md-6 col-lg-4 film-cache-mobile">
+                    <article>
+                        <figure>
+                            <img src="https://picsum.photos/seed/autre4/300/450" alt="Affiche du film Le Dernier Rempart">
+                        </figure>
+                        <h3>Le Dernier Rempart</h3>
+                        <button type="button">Détails</button>
+                    </article>
+                </li>
+                <li class="col-12 col-md-6 col-lg-4 film-cache-tablette">
+                    <article>
+                        <figure>
+                            <img src="https://picsum.photos/seed/autre5/300/450" alt="Affiche du film Nuit sans Fin">
+                        </figure>
+                        <h3>Nuit sans Fin</h3>
+                        <button type="button">Détails</button>
+                    </article>
+                </li>
+                <li class="col-12 col-md-6 col-lg-4 film-cache-tablette">
+                    <article>
+                        <figure>
+                            <img src="https://picsum.photos/seed/autre6/300/450" alt="Affiche du film Horizon Brisé">
+                        </figure>
+                        <h3>Horizon Brisé</h3>
+                        <button type="button">Détails</button>
+                    </article>
+                </li>
+            </ul>
+            <button type="button" class="bouton-voir-plus d-lg-none" data-list-id="liste-autres">Voir plus</button>
+        </section>
+
+    </main>
+
+    <!-- MODALE : détail d'un film -->
+    <dialog id="modal-detail-film" aria-labelledby="modal-titre-film">
+
+        <figure>
+            <img id="modal-image" src="https://picsum.photos/seed/detail/500/700" alt="Affiche du film">
+        </figure>
+
+        <h2 id="modal-titre-film">Titre du film</h2>
+
+        <p id="modal-annee-genres">Année - Genres</p>
+        <p id="modal-classification-duree-pays">Classification - Durée (Pays)</p>
+        <p id="modal-score">IMDB score : </p>
+        <p id="modal-box-office">Recettes au box-office : </p>
+
+        <p id="modal-realisateur">Réalisé par : </p>
+
+        <p id="modal-resume"></p>
+
+        <h3>Avec :</h3>
+        <p id="modal-acteurs"></p>
+
+        <button type="button" id="modal-fermer-bouton" aria-label="Fermer la fenêtre">Fermer</button>
+    </dialog>
+
+    <footer>
+        <p>&copy; 2026 JustStreamIt - Association de classement de films</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

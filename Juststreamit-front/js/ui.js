@@ -12,6 +12,7 @@ function renderBestMovie(movie) {
     const image = document.getElementById("meilleur-film-image");
     const titre = document.getElementById("meilleur-film-titre");
     const resume = document.getElementById("meilleur-film-resume");
+    const boutonDetails = document.getElementById("meilleur-film-bouton-details");
 
     image.src = movie.image_url;
     image.alt = `Affiche du film ${movie.title}`;
@@ -21,6 +22,7 @@ function renderBestMovie(movie) {
     };
     titre.textContent = movie.title;
     resume.textContent = movie.description || "";
+    boutonDetails.dataset.movieId = movie.id;
 }
 
 /**
